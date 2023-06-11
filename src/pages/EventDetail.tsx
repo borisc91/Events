@@ -22,13 +22,7 @@ function EventDetail() {
 
 export default EventDetail;
 
-export const loader = async ({
-  request,
-  params,
-}: {
-  request: Request;
-  params: any;
-}) => {
+export const loader = async ({ params }: { params: any }) => {
   const id = params.eventId;
   const response = await fetch("http://localhost:8080/events/" + id);
 
